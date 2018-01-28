@@ -10,7 +10,7 @@ class InviteMeCommand extends Commando.Command {
     }
 
     async run(message, args) {
-        message.reply("https://discordapp.com/api/oauth2/authorize?client_id=193626196401979392&permissions=8&scope=bot");
+        message.reply("https://discordapp.com/api/oauth2/authorize?client_id=313243870236377089&permissions=8&scope=bot");
     }
 }
 
