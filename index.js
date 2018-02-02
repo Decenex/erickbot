@@ -1,12 +1,30 @@
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
 const Commando = require('discord.js-commando');
 const path = require('path');
 const sqlite = require('sqlite');
 const oneLine = require('common-tags').oneLine;
 const client = new Commando.Client({
     owner: '193626196401979392',
-    commandPrefix: 'e@'
+    commandPrefix: 'e@',
+    disableEveryone: true,
+    unknownCommandResponse: false
 });
 const token = process.env.TOKEN
+
+client.on('ready', () => {
+         client.user.setActivity('e@help command', ['Playing']); 
+});
 
 client
 	.on('error', console.error)
