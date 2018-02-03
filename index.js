@@ -73,7 +73,9 @@ client.setProvider(
 
 
 client.registry
-	.registerGroup('test', 'Test')
+	.registerGroup('fun', 'Fun')
+	.registerGroup('image', 'Image')
+	.registerGroup('bot', 'Bot')	
 	.registerGroup('music', 'Music')
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
