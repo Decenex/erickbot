@@ -15,7 +15,6 @@ module.exports = class SayCommand extends Commando.Command {
                 }
             ]
         });    
-    }
 	}
 
     run(msg, args) {
