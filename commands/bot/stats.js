@@ -41,7 +41,7 @@ module.exports = class StatusCommand extends Commando.Command {
 				{
 					name: 'Version',
 					value: `2.5.1`,
-					inline: true
+					inline: false
 				}
 			],
 			

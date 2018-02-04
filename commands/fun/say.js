@@ -4,7 +4,7 @@ module.exports = class SayCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'say',
-            group: 'bot',
+            group: 'fun',
             memberName: 'say',
             description: 'Will say anything you want!',
             args: [
@@ -15,7 +15,6 @@ module.exports = class SayCommand extends Commando.Command {
                 }
             ]
         });    
-    }
 	}
 
     run(msg, args) {
