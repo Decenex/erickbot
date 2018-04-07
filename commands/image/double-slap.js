@@ -4,24 +4,28 @@ class DoubleSlapCommand extends Commando.Command {
     constructor(client){
         super(client, {
             name: "double-slap",
+            aliases: ['slap', 'multi-slap'],
             group: "image",
             memberName: "double-slap",
             description: "Slap someone more than once!",
             args: [
-                {
-                    key: 'text',
-                    prompt: 'Who/What do you want to slap?',
-                    type: 'string'
-                }
+				{
+					key: 'member',
+					label: 'user',
+					prompt: 'Who do want to slap?',
+					type: 'member'
+				}
             ]
         });
     }
 
     async run(message, args) {
-        const { text } = args;
+        const member = args.member;
+        const user = member.user;
+        //const { text } = args;
         const embed = new RichEmbed()
         .setImage("https://i.imgur.com/6mOFy3v.gif")
-        .addField(message.author.username + " used double slap against " + text + hit[Math.floor(Math.random() * hit.length)]);
+        .setDescription(message.author.username + " used double slap against " + user.username + hit[Math.floor(Math.random() * hit.length)]);
         message.channel.send({embed});
     
 

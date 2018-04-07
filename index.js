@@ -77,6 +77,7 @@ client.registry
 	.registerGroup('image', 'Image')
 	.registerGroup('bot', 'Bot')	
 	.registerGroup('music', 'Music')
+  .registerGroup('loli', 'Loli')
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 client.login(token);
